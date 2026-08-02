@@ -1,0 +1,6 @@
+{
+  "name": "CYPY Web",
+  "description": "Modern SaaS web application and backend API for CYPY AI Manga Translator",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
