@@ -8,9 +8,8 @@ from datetime import datetime
 from typing import Dict, Any, Optional, Tuple, List
 from fastapi import UploadFile, BackgroundTasks
 
-from backend.app.config import settings
-from backend.app.api.routes import JobStatus, JobResponse
-
+from app.config import settings
+from app.api.routes import JobStatus, JobResponse
 # Set up logging
 logger = logging.getLogger("cypy_service")
 logger.setLevel(logging.INFO)

@@ -11,8 +11,8 @@ for p in [ROOT_DIR, CYPY_DIR]:
     if os.path.exists(p) and p not in sys.path:
         sys.path.insert(0, p)
 
-from backend.app.config import settings
-from backend.app.api.routes import router as api_router
+from app.config import settings
+from app.api.routes import router as api_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,

@@ -5,8 +5,7 @@ from typing import List, Optional
 from enum import Enum
 import os
 
-from backend.app.config import settings
-
+from app.config import settings
 
 class JobStatus(str, Enum):
     PENDING = "PENDING"
@@ -59,9 +58,8 @@ router = APIRouter(prefix="", tags=["CYPY Engine API"])
 
 # Service dependency accessor - to be imported from services module
 def get_cypy_service():
-    from backend.app.services.cypy_service import CypyService
+    from app.services.cypy_service import CypyService
     return CypyService()
-
 
 @router.get("/health", response_model=HealthResponse, status_code=status.HTTP_200_OK)
 async def check_health(service=Depends(get_cypy_service)):
