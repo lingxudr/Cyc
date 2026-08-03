@@ -22,12 +22,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://cyc-cfet.vercel.app"],
+    allow_origins=[
+        "https://cyc-xi.vercel.app",
+    ],
     allow_credentials=False,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
-
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
 @app.get("/api/health")
