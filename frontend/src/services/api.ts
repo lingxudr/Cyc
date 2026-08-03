@@ -11,6 +11,8 @@ export const apiClient = axios.create({
   },
 });
 
+console.log("API BASE URL =", API_BASE_URL);
+
 export interface HealthStatus {
   status: string;
   service: string;
