@@ -13,7 +13,9 @@ class Settings(BaseSettings):
     DEBUG: bool = False
     
     # CORS Configuration
-    CORS_ORIGINS: list[str] = ["*"]
+    CORS_ORIGINS: list[str] = [
+    "https://cyc-cfet.vercel.app",
+]
     
     # CYPY Engine Path Configuration
     CYPY_ENGINE_DIR: str = os.path.abspath(
